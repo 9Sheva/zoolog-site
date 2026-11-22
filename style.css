@@ -1,0 +1,130 @@
+/* Страницы Zoolog: политика конфиденциальности и поддержка. Цвета — как в приложении (src/constants/theme.ts). */
+:root {
+  --text: #11181c;
+  --muted: #5b6670;
+  --accent: #1e3a5f;
+  --card: rgba(255, 255, 255, 0.72);
+  --line: rgba(30, 58, 95, 0.12);
+  --bg: radial-gradient(circle at 15% 20%, #a9c8f2 0%, transparent 45%),
+    radial-gradient(circle at 90% 55%, #e2c2ee 0%, transparent 40%),
+    radial-gradient(circle at 25% 90%, #bfe3e4 0%, transparent 45%),
+    linear-gradient(165deg, #e6eef9 0%, #f1ecf8 55%, #eaf3f5 100%);
+  --bg-solid: #e6eef9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #ecedee;
+    --muted: #9ba1a6;
+    --accent: #8fb3e0;
+    --card: rgba(21, 30, 46, 0.72);
+    --line: rgba(143, 179, 224, 0.16);
+    --bg: radial-gradient(circle at 15% 20%, #1f4a86 0%, transparent 45%),
+      radial-gradient(circle at 90% 55%, #4a2a6e 0%, transparent 40%),
+      radial-gradient(circle at 25% 90%, #1c5560 0%, transparent 45%),
+      linear-gradient(165deg, #0b1220 0%, #141530 55%, #0e1c2c 100%);
+    --bg-solid: #0b1220;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--bg-solid);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Segoe UI', Roboto, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 32px 16px 56px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+header img {
+  width: 56px;
+  height: 56px;
+  border-radius: 13px;
+}
+
+header .app {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header .langs {
+  margin-left: auto;
+  font-size: 15px;
+}
+
+section {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 24px 22px;
+  margin-bottom: 20px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+h1 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+
+h2 {
+  font-size: 19px;
+  margin: 28px 0 8px;
+}
+
+p,
+ul {
+  margin: 0 0 12px;
+}
+
+ul {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 4px;
+}
+
+.date {
+  color: var(--muted);
+  font-size: 15px;
+  margin-bottom: 18px;
+}
+
+.lead {
+  font-size: 18px;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+footer {
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
